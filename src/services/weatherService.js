@@ -8,6 +8,12 @@ export const fetchWeather = async (city) => {
       `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`
     );
 
+    console.log('API Response:', response.data); // Log the response
+
+    if (response.data.cod !== 200) {
+      throw new Error(`API error: ${response.data.message}`);
+    }
+
     const weatherData = {
       city: city,
       temperature: response.data.main.temp,

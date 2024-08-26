@@ -5,7 +5,7 @@ const WeatherCard = ({ weather, city }) => (
   <Card title={`Weather in ${city}`} style={{ marginTop: '20px', width: 300 }}>
     <Row>
       <Col span={12}>
-        <p>Temperature: {weather.temp}°C</p>
+        <p>Temperature: {weather.temperature}°C</p>
         <p>Humidity: {weather.humidity}%</p>
         <p>Condition: {weather.condition}</p>
       </Col>
